@@ -118,7 +118,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -134,6 +133,8 @@ LOGIN_URL = "login_view"
 LOGIN_REDIRECT_URL = "/friends"
 # ログアウト後に遷移するページを指定（ログアウトはあとで実装する）
 LOGOUT_REDIRECT_URL = "/"
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 try:
     from .local_settings import *
